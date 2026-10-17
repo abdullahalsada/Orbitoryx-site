@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get Retro Arcade</title>
+<meta name="description" content="Download Retro Arcade: Classic Games — 32 handcrafted retro games, no ads ever, one-time $4.99. On the App Store and Google Play.">
+<link rel="icon" type="image/png" href="logo.png">
+<style>
+  :root {
+    --bg: #0a0a12;
+    --card: #12121f;
+    --border: #2a2a45;
+    --text: #e8e8f0;
+    --dim: #9a9ab5;
+    --green: #39ff14;
+    --cyan: #00fff7;
+    --yellow: #ffe600;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: ui-monospace, Menlo, Consolas, monospace;
+    line-height: 1.7;
+    display: flex; min-height: 100vh; align-items: center; justify-content: center;
+  }
+  .wrap { max-width: 480px; margin: 0 auto; padding: 2.5rem 1.25rem; text-align: center; }
+  .applogo {
+    width: 128px; height: 128px; border-radius: 28px;
+    box-shadow: 0 0 36px rgba(123, 47, 247, 0.5), 0 0 80px rgba(0, 255, 247, 0.2);
+  }
+  h1 {
+    color: var(--cyan); font-size: 1.5rem; margin: 1.1rem 0 0.3rem;
+    text-shadow: 0 0 12px rgba(0, 255, 247, 0.5);
+  }
+  .pitch { color: var(--text); margin: 0.2rem 0 0.4rem; font-size: 0.95rem; }
+  .price { color: var(--yellow); margin: 0 0 1.6rem; font-size: 0.9rem; }
+  .price b { color: var(--green); }
+  .stores { display: flex; flex-direction: column; gap: 0.8rem; align-items: center; }
+  .store-btn {
+    display: flex; align-items: center; justify-content: center; gap: 0.7rem;
+    background: #000; border: 1.5px solid #a6a6a6; border-radius: 12px;
+    padding: 0.7rem 1.2rem; text-decoration: none; width: min(300px, 100%);
+    font-family: -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  .store-btn:hover { border-color: #fff; }
+  .store-btn.primary { border-color: var(--green); box-shadow: 0 0 18px rgba(57, 255, 20, 0.25); }
+  .store-btn svg { flex: 0 0 auto; }
+  .store-btn .txt { display: flex; flex-direction: column; line-height: 1.15; text-align: left; }
+  .store-btn .small { font-size: 0.65rem; color: #e8e8e8; }
+  .store-btn .big { font-size: 1.15rem; color: #fff; font-weight: 600; }
+  .games { color: var(--dim); font-size: 0.8rem; margin-top: 1.6rem; letter-spacing: 1px; }
+  .foot { color: var(--dim); font-size: 0.75rem; margin-top: 1.2rem; }
+  .foot a { color: var(--dim); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <img class="applogo" src="logo.png" alt="Retro Arcade logo — a neon joystick">
+  <h1>Retro Arcade: Classic Games</h1>
+  <p class="pitch">32 handcrafted retro games. No ads, ever.</p>
+  <p class="price">One-time <b>$4.99</b> — every game yours forever. 4 free games to try.</p>
+  <div class="stores">
+    <a id="ios-btn" class="store-btn" href="https://apps.apple.com/us/app/retro-arcade-classic-games/id6817787470" rel="noopener" aria-label="Download on the App Store">
+      <svg width="24" height="28" viewBox="0 0 814 1000" fill="#fff" aria-hidden="true"><path d="M788 341c-6 4-108 61-108 189 0 148 130 200 134 201-1 3-21 72-69 142-43 62-88 124-156 124s-86-40-165-40c-77 0-104 41-167 41s-107-57-157-127C42 787 0 661 0 541c0-192 125-294 248-294 65 0 120 43 161 43 39 0 100-45 174-45 28 0 129 2 205 96zM553 160c31-37 53-88 53-139 0-7-1-14-2-20-50 2-110 34-146 76-29 33-56 84-56 136 0 8 1 16 2 18 3 1 8 2 13 2 45 0 102-30 136-73z"/></svg>
+      <span class="txt"><span class="small">Download on the</span><span class="big">App Store</span></span>
+    </a>
+    <a id="android-btn" class="store-btn" href="https://play.google.com/store/apps/details?id=com.orbitoryx.retroarcade" rel="noopener" aria-label="Get it on Google Play">
+      <svg width="25" height="28" viewBox="0 0 512 512" aria-hidden="true"><path fill="#00d7fe" d="M48 32 304 256 48 480c-10-6-16-17-16-30V62c0-13 6-24 16-30z"/><path fill="#ffce00" d="M304 256l96-84 70 40c21 12 21 44 0 56l-70 40-96-52z"/><path fill="#00f076" d="M48 32c6-4 15-5 23 0l329 140-96 84L48 32z"/><path fill="#f63448" d="M48 480c6 4 15 5 23 0l329-140-96-84L48 480z"/></svg>
+      <span class="txt"><span class="small">GET IT ON</span><span class="big">Google Play</span></span>
+    </a>
+  </div>
+  <p class="games">32 GAMES &middot; 14 LANGUAGES</p>
+  <p class="foot">&copy; 2026 Orbit Oryx &middot; <a href="privacy-policy.html">Privacy Policy</a></p>
+</div>
+<script>
+  // Highlight the visitor's own store and list it first.
+  (function () {
+    var ua = navigator.userAgent || '';
+    var ios = /iPhone|iPad|iPod/i.test(ua);
+    var android = /Android/i.test(ua);
+    var iosBtn = document.getElementById('ios-btn');
+    var andBtn = document.getElementById('android-btn');
+    if (ios) { iosBtn.classList.add('primary'); }
+    if (android) {
+      andBtn.classList.add('primary');
+      andBtn.parentNode.insertBefore(andBtn, iosBtn);
+    }
+  })();
+</script>
+</body>
+</html>
