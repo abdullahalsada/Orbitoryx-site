@@ -69,12 +69,16 @@
     padding: 0.4rem 1rem; cursor: pointer; letter-spacing: 1px;
   }
   .about-btn:hover { background: rgba(0, 255, 247, 0.08); }
-  .soon {
-    display: inline-block; margin-top: auto; padding: 0.45rem 1rem;
-    border: 2px solid var(--magenta); border-radius: 8px;
-    color: var(--magenta); font-weight: bold; font-size: 0.8rem;
-    letter-spacing: 1px;
+  .stores { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-top: auto; }
+  .store-btn {
+    display: inline-block; padding: 0.45rem 1rem;
+    border: 2px solid var(--green, #39ff14); border-radius: 8px;
+    color: var(--green, #39ff14); font-weight: bold; font-size: 0.8rem;
+    letter-spacing: 1px; text-decoration: none;
   }
+  .store-btn:hover { background: rgba(57, 255, 20, 0.08); }
+  .store-btn.ios { border-color: var(--cyan); color: var(--cyan); }
+  .store-btn.ios:hover { background: rgba(0, 255, 247, 0.08); }
 
   /* Pop-ups */
   dialog {
@@ -117,7 +121,10 @@
       <img src="logo.png" alt="Retro Arcade logo — a neon joystick">
       <h2>Retro Arcade</h2>
       <button class="about-btn" onclick="document.getElementById('retro-arcade-modal').showModal()">ABOUT THE GAME</button>
-      <span class="soon">COMING SOON — APP STORE &amp; GOOGLE PLAY</span>
+      <div class="stores">
+        <a class="store-btn ios" href="https://apps.apple.com/us/app/retro-arcade-classic-games/id6817787470" target="_blank" rel="noopener">🍎 APP STORE</a>
+        <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.orbitoryx.retroarcade" target="_blank" rel="noopener">▶ GOOGLE PLAY</a>
+      </div>
     </div>
   </div>
 
