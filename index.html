@@ -71,14 +71,16 @@
   .about-btn:hover { background: rgba(0, 255, 247, 0.08); }
   .stores { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-top: auto; }
   .store-btn {
-    display: inline-block; padding: 0.45rem 1rem;
-    border: 2px solid var(--green, #39ff14); border-radius: 8px;
-    color: var(--green, #39ff14); font-weight: bold; font-size: 0.8rem;
-    letter-spacing: 1px; text-decoration: none;
+    display: flex; align-items: center; gap: 0.5rem;
+    background: #000; border: 1.5px solid #a6a6a6; border-radius: 9px;
+    padding: 0.4rem 0.8rem; text-decoration: none;
+    font-family: -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   }
-  .store-btn:hover { background: rgba(57, 255, 20, 0.08); }
-  .store-btn.ios { border-color: var(--cyan); color: var(--cyan); }
-  .store-btn.ios:hover { background: rgba(0, 255, 247, 0.08); }
+  .store-btn:hover { border-color: #fff; }
+  .store-btn svg { flex: 0 0 auto; }
+  .store-btn .txt { display: flex; flex-direction: column; line-height: 1.15; text-align: left; }
+  .store-btn .small { font-size: 0.55rem; color: #e8e8e8; letter-spacing: 0.2px; }
+  .store-btn .big { font-size: 0.95rem; color: #fff; font-weight: 600; letter-spacing: 0.2px; }
 
   /* Pop-ups */
   dialog {
@@ -122,8 +124,14 @@
       <h2>Retro Arcade</h2>
       <button class="about-btn" onclick="document.getElementById('retro-arcade-modal').showModal()">ABOUT THE GAME</button>
       <div class="stores">
-        <a class="store-btn ios" href="https://apps.apple.com/us/app/retro-arcade-classic-games/id6817787470" target="_blank" rel="noopener">🍎 APP STORE</a>
-        <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.orbitoryx.retroarcade" target="_blank" rel="noopener">▶ GOOGLE PLAY</a>
+        <a class="store-btn" href="https://apps.apple.com/us/app/retro-arcade-classic-games/id6817787470" target="_blank" rel="noopener" aria-label="Download on the App Store">
+          <svg width="18" height="21" viewBox="0 0 814 1000" fill="#fff" aria-hidden="true"><path d="M788 341c-6 4-108 61-108 189 0 148 130 200 134 201-1 3-21 72-69 142-43 62-88 124-156 124s-86-40-165-40c-77 0-104 41-167 41s-107-57-157-127C42 787 0 661 0 541c0-192 125-294 248-294 65 0 120 43 161 43 39 0 100-45 174-45 28 0 129 2 205 96zM553 160c31-37 53-88 53-139 0-7-1-14-2-20-50 2-110 34-146 76-29 33-56 84-56 136 0 8 1 16 2 18 3 1 8 2 13 2 45 0 102-30 136-73z"/></svg>
+          <span class="txt"><span class="small">Download on the</span><span class="big">App Store</span></span>
+        </a>
+        <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.orbitoryx.retroarcade" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+          <svg width="19" height="21" viewBox="0 0 512 512" aria-hidden="true"><path fill="#00d7fe" d="M48 32 304 256 48 480c-10-6-16-17-16-30V62c0-13 6-24 16-30z"/><path fill="#ffce00" d="M304 256l96-84 70 40c21 12 21 44 0 56l-70 40-96-52z"/><path fill="#00f076" d="M48 32c6-4 15-5 23 0l329 140-96 84L48 32z"/><path fill="#f63448" d="M48 480c6 4 15 5 23 0l329-140-96-84L48 480z"/></svg>
+          <span class="txt"><span class="small">GET IT ON</span><span class="big">Google Play</span></span>
+        </a>
       </div>
     </div>
   </div>
