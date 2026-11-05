@@ -6,6 +6,20 @@
 <title>Get Retro Arcade</title>
 <meta name="description" content="Download Retro Arcade: Classic Games free — 32 handcrafted retro games, no ads ever. On the App Store and Google Play.">
 <link rel="canonical" href="https://www.orbitoryx.com/get.html">
+<script>
+  // Phones go straight to their store; desktops see the page.
+  (function () {
+    var ua = navigator.userAgent || "";
+    var ios = /iPhone|iPad|iPod/i.test(ua) ||
+              (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    var android = /Android/i.test(ua);
+    if (ios) {
+      location.replace("https://apps.apple.com/us/app/retro-arcade-classic-games/id6817787470");
+    } else if (android) {
+      location.replace("https://play.google.com/store/apps/details?id=com.orbitoryx.retroarcade");
+    }
+  })();
+</script>
 <link rel="icon" type="image/png" href="logo.png">
 <style>
   :root {
